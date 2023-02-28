@@ -1,0 +1,91 @@
+*{
+	margin:0;
+    padding:0;
+}
+.header {
+    
+    text-align: center;   
+    font-size: 30px;
+    color: rgba(45, 177, 5, 0.945);
+    background-color: rgb(220, 14, 203);
+    padding: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to bottom right, rgb(187, 6, 6) , rgb(186, 244, 12));
+}
+h1 {
+    text-shadow: 2px 2px 5px rgb(222, 6, 136);;
+}
+.nav-bar{
+    text-align: center;
+    list-style:none;
+    margin-top:0px;
+    word-spacing:10px;
+    text-decoration: none;
+    background-color: rgb(16, 23, 228);
+    padding: 15px;
+    }
+    .nav-bar li{
+    display:inline-block;
+    }
+    .nav-bar li a{
+    color:#fff;
+    text-decoration:none;
+    padding:16px 20px;
+    font-family:poppins;
+    font-size:16px;
+    }
+    .nav-bar li a:hover{
+    background:rgb(191, 212, 3);
+    color:#333;
+    }
+    .main{
+        width: 100%;
+        background-image: url('photo1.png');
+        padding: 0px;
+        margin: 0px;
+        background-size: 100% 100%;
+        display: flex;        
+        justify-content: center;
+
+    }
+
+    .text-area {
+        font-size: 20px;
+        text-align: justify;
+        color: rgb(1, 9, 9);
+        align-items: flex-start;
+        padding: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .img-area {
+        align-items: stretch;
+        padding: 50px;
+    }
+    .table-detail {
+        align-items: flex-end;
+        padding: 30px;
+        border-collapse: collapse;
+        width: 100%;        
+    }
+    
+    .table-detail td {
+        border: 1px solid rgb(71, 9, 187);
+        padding: 10px;
+        text-align: center;
+    }
+    .table-detail th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #04AA6D;
+        color: white;
+        border: 1px solid rgb(71, 9, 187);
+        
+    }
+    .footer {
+        padding: 30px;
+        color: darkred;
+        background-color: rgb(220, 14, 203);
+        background-image: linear-gradient(to bottom right, rgb(187, 6, 6) , rgb(186, 244, 12));
+        text-align: center;
+    }

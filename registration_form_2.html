@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+
+    <script>  
+        function validateform(){  
+        var name=document.myform.name.value;
+        var num=document.myform.num.value;
+        var x=document.myform.email.value;
+        var atposition=x.indexOf("@");  
+        var dotposition=x.lastIndexOf(".");
+        var password=document.myform.password.value;  
+          
+        if (name==null || name==""){
+            alert("Name can't be blank");  
+            return false;
+        }
+
+        else if (isNaN(num)){
+            document.getElementById("numloc").innerHTML="Enter Numeric value only";
+            return false;
+        }else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+            alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);
+            return false;  
+        }else if(password.length<6){
+            alert("Password must be at least 6 characters long.");  
+            return false;
+        }
+        else if(document.sampleform.Pin.value=="" || isNaN(document.sampleform.Pin.value) || document.sampleform.Pin.value.length!=5)
+        {
+            alert("Please input a valid Pin code");
+            document.sampleform.Pin.focus();
+            return false;
+        }
+
+        else{
+            return true;
+            }  
+        }  
+
+
+        </script>
+</head>
+<style>
+    body{
+        color: black;
+        background-color: aqua;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    textarea {
+        width: 20%;
+        height: 100px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+    }
+</style>
+<body>
+    <h1 style="color: red;">Registration Form</h1>
+    
+    <ul>
+        <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+        First Name: <input type="text" name="First Name"><br><br>
+        Second Name: <input type="text" name="Second Name"><br><br>
+        Age: <input type="text" name="num" min="0" max="110"><span id="numloc"></span><br><br>
+        Email: <input type="text" name="email"><br><br>   
+        Password: <input type="password" name="password"><br><br>
+        Mobile: <input type="num" name="num" min="10" max="10"><br><br>
+        DOB: <input type="date" name="Date"><br><br>
+        Pincode: <input type="Pin" name="Pin"><br><br>
+
+        <p style="text-align: center;">Gender:<br>
+        <input type="radio" name="Gender" value="Male">
+        <label for="Gender">Male</label><br>
+        <input type="radio" name="Gender" value="Female">
+        <label for="Gender">Female</label><br><br>
+        </p>
+        
+        <select name="City">
+            <option value="Select city" style="color: blue;">Select city</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Ahemdabad">Ahemdabad</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Amritsar">Amritsar</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Dehradun">Dehradun</option>
+            <option value="Patna">Patna</option>
+            </select><br><br>
+
+        <select name="state">
+            <option value="Select state" style="color: blue;">Select state</option>
+            <option value="Maharashtra">Maharastra</option>
+            <option value="Gujrat">Gujrat</option>
+            <option value="Uttar pradesh">Uttar pradesh</option>
+            <option value="Punjab">Panjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="Bihar">Bihar</option>
+        </select><br><br>
+        <label>Comments:</label><br>
+        <textarea></textarea><br><br>
+      
+        <button onclick="Submit">submit</button>
+        <input type="reset" value="Reset"></inputtype>
+    </form>
+    </ul>
+   
+    
+</body>
+</html>     
